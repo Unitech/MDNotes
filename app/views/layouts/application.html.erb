@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+    <%= render :partial => 'layouts/head' %>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Cabin' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    <!-- Floating object -->
+    <div id="modal">
+    </div>
+    <div id="modal-box">
+
+    </div>
+
+    <div id="traffic-light" title="Syncronisation indicator">
+      <ul>
+	<li id="green-light">&nbsp;</li>
+	<li id="red-light">&nbsp;</li>
+      </ul>
+    </div>
+    <!-- ! Floating object -->
+
+    <div id="menu-bar">
+      <ul>
+	<li class="brand">
+	  <span id="logo">
+	    <%= image_tag('md-50-50.png') %>
+	  </span>
+	  <a href="/">
+	    MdNotes
+	  </a>
+	</li>
+	
+	<li id="file-title">
+	  <span id="inner-title"></span>
+	  <small><i>click to change the title</i></small>
+	</li>
+	
+	
+	<ul class="push-right">
+	  <li class="menu-btn" id="save-btn">Save</li>
+	  <li class="menu-btn" id="delete-btn">Delete</li>
+	</ul>
+
+      </ul>
+    </div>
+
+    <div style="clear:both"></div>
+    
+    <div id="main-content">
+      <table cellspacing="0" cellpadding="0" border="0">
+
+	
+	<tr>
+	  
+	  <td id="first-container">
+	    <div id="control-panel">
+	      <center>
+	    	<ul>
+	    	  <li class="panel-btn" id="new-note-btn">New note</li>
+	    	  <li class="panel-btn" id="new-collection-btn">New collection</li>
+	    	</ul>
+	      </center>
+	    </div>
+	    
+	    <ul id="note-listing">
+	    </ul>
+	  </td>
+	  
+	  <td id="split-pane">
+	  </td>
+	  
+	  <!-- Text area panel -->
+	  <td id="second-container">
+	    <!-- <span id="menu-textarea"> -->
+	    <!--   &nbsp; -->
+	    <!-- </span> -->
+	    <textarea id="edit-area" contentEditable="true">
+	    </textarea>
+	  </td>
+
+	  <td id="split-pane">
+	  </td>
+	  
+	  <td id="preview-mode">
+	    <div id="preview-note" class="md">
+	      
+	    </div>
+	  </td>
+
+	</tr>
+
+      </table>
+    </div>
+
+    <%= render :partial => 'layouts/javascript' %>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+@import "variables";
+@import "functions";
+
+
+#modal {
+    position : absolute;
+    top : 0;
+    left : 0;
+    z-index : 150;
+    background-color : #222;
+    width : 100%;
+    height : 100%;
+    opacity : 0.4;
+    display : none;
+}
+#modal-box {
+    display : none;
+    z-index : 200;
+	position : absolute;
+	left : 50%;
+	top : 50%;
+	width : 300px;
+	height : 150px;
+	background-color : white;
+	text-align : center;
+	padding : 10px;
+	margin-top : -95px;
+	margin-left : -150px;
+	opacity : 1;
+	border : 10px solid $menu-color;
+	@include rounded(10px);
+    }

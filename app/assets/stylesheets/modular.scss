@@ -1,0 +1,42 @@
+@import "variables";
+@import "functions";
+
+
+td {
+    vertical-align: top;
+}
+
+small {
+    font-size : 11px;
+}
+
+.push-right {
+    float : right;
+    margin-right : 15px;
+}
+
+.menu-btn {
+    font-family: 'Cabin', sans-serif;
+    line-height : 30px;
+    padding : 0 10px;
+    margin-top : 10px;
+    background-color : #808484;
+    color : white;
+
+    animation:my-animation 3s infinite;
+    -moz-animation:my-animation 3s infinite; /* Firefox */
+    -webkit-animation:my-animation 3s infinite; /* Safari and Chrome */
+
+
+    @include rounded(5px);
+    @include transition(0.2s);
+    &:hover {
+	background-color : #00B4CC;
+	cursor : pointer;
+    }
+}
+
+.panel-btn {
+    @extend .menu-btn;
+    margin : 8px 0px 8px 0px;
+}

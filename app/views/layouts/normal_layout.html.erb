@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <%= render :partial => 'layouts/head' %>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Cabin' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    <div id="menu-bar">
+      <ul>
+	<li class="brand">
+	  <a href="/">
+	    MdNotes
+	  </a>
+	</li>
+	  
+	
+	
+	<ul class="push-right">
+	  <li class="menu-btn">Save</li>
+	  <li class="menu-btn">Delete</li>
+	</ul>
+
+      </ul>
+    </div>
+
+    <div style="clear:both"></div>
+    
+    <div id="main-content">
+      <table cellspacing="0" cellpadding="0" border="0">
+	<tbody>
+	  <tr>
+	    
+	    <td id="first-container">
+	      &nbsp;
+	    </td>
+	    
+	    <td id="split-pane">
+	    </td>
+	    
+	    <td id="second-container">
+	      <%= yield %>
+	    </td>
+
+	  </tr>
+	</tbody>
+      </table>
+    </div>
+
+    <%= render :partial => 'layouts/javascript' %>
+  </body>
+</html>

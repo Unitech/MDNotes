@@ -1,0 +1,41 @@
+
+@import "variables";
+@import "functions";
+
+#note-listing {
+    li {
+	font-size : 12px;
+	@include transition(0.2s);
+	&:hover {
+
+	    background-color : $menu-color;
+	    color : white;
+
+	}	
+	&:first-child {
+	    
+	}
+	a {
+	    line-height : 20px;
+	    padding : 3px 0 3px 8px;
+	    width : 100%;
+	    display : block;
+	    color : #222;
+	    text-decoration : none;
+	    &:hover {
+		color : white;
+	    }
+
+	}
+    }
+}
+
+#note-listing .selected {
+    background-color : $menu-color;
+    color : white;
+    a {
+	color : white;
+	font-weight : bold;
+    }
+}
+

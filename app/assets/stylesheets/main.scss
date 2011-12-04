@@ -1,0 +1,111 @@
+
+@import "variables";
+@import "functions";
+@import "animations";
+
+@include reset();
+@include customize_scroll();
+
+
+body {
+    min-width : 900px;
+    overflow : hidden;
+    font-family: arial,sans-serif;
+    color: #222;
+}
+
+#menu-bar {
+    height : 50px;
+
+    border-bottom : 1px solid $border-light;
+    width : 100%;
+    line-height : 50px;
+    background-color : $menu-color;
+    color : white;
+    li {
+	display : inline-block;
+    }
+    li.brand {
+	a {
+	    margin-left : 60px;
+	    font-size : 35px;
+	    color : white;
+	    text-decoration : none;
+	    font-family: 'Cabin', sans-serif;
+	}
+    }
+    li#file-title {
+	margin-left : 55px;
+	&:hover {
+	    cursor : pointer;
+	}
+
+    }
+    #logo {
+	position : absolute;
+	top : 4px;
+	left : 12px;
+	height : 40px;
+	width : 40px;
+	@include transition(0.5s);
+	&:hover {
+	    -webkit-transform: rotate(+1900deg);
+	}
+    }
+    
+}
+
+#main-content {
+
+    #first-container {
+	width : 250px;
+	border-right : 2px solid $border-light;
+	#control-panel {
+
+	    background-color : $menu-color;
+	    border-bottom : 1px solid $border-light;
+	    li {
+		display : inline-block;
+	    }
+	}
+    }
+    #split-pane {
+
+    }
+}
+
+
+#second-container {
+    border-right : 2px solid $border-light;
+    #menu-textarea {
+	display : inline-block;
+	width : inherit;
+	height : 46px;
+	border-bottom : 1px solid $border-light;
+	background-color : $menu-color;
+    }
+    #edit-area {
+	padding : 5px 0 0 3px;
+	font-size : 15px;
+	font-family : 'Droid Sans', sans-serif;
+	border : none;
+	resize: none;
+	
+	height : inherit;
+	width : 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+    }
+}
+
+#preview-mode {
+    overflow : auto;
+    #preview-note {
+	overflow : auto;
+	padding : 5px;
+    }
+}
+
+

@@ -1,0 +1,38 @@
+
+@mixin fade-in {
+    0% {
+	opacity : 1;
+    }
+    50% {
+	opacity : 0;
+    }
+    100% {
+	opacity : 1;
+    }
+}
+
+@mixin fade_in_fade_out {
+
+    @-webkit-keyframes my-animation {
+	@include fade-in();
+    }
+    @-moz-keyframes my-animation{
+	@include fade-in();
+    }
+    @keyframes my-animation{
+	@include fade-in();
+    }
+
+    animation:my-animation 3s infinite;
+    -moz-animation:my-animation 3s infinite; /* Firefox */
+    -webkit-animation:my-animation 3s infinite; /* Safari and Chrome */
+}
+
+
+/* @-webkit-keyframes my-animation { */
+/*   0%   { opacity: 1; transform: scale(1); } */
+/*   20%  { opacity: .8; transform: scale(1.1); } */
+/*   40%  { opacity: 1; transform: scale(1); } */
+/*   60%  { opacity: .8; transform: scale(1.1); } */
+/*   100% { opacity: 1; transform: scale(1); } */
+/* } */

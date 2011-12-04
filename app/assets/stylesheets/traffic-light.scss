@@ -1,0 +1,23 @@
+
+@import "variables";
+@import "functions";
+
+#traffic-light {
+    position : absolute;
+    top : 60px;
+    right : 20px;
+    
+    #green-light, #red-light {
+	@include rounded(20px);
+	height : 10px;
+	width : 10px;
+	margin-bottom : 5px;
+	@include transition(0.6s);
+    }
+    #green-light {
+	background-color : green;
+    }
+    #red-light {
+	background-color : red;
+    }
+}

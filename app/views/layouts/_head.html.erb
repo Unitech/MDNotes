@@ -1,0 +1,49 @@
+<meta charset="utf-8">
+
+<!-- Enable Google Chrome Frame -->
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<!-- Robots -->
+<meta name="robots" content="INDEX, FOLLOW ALL">
+
+<!-- Meta data -->
+<meta name="resource-type" content="document">
+<base href="">
+<meta name="identifier-url" content="">
+<meta name="revisit-after" content="2 days">
+<meta name="creation-date" content="<%= Date.today %>">
+<meta name="keywords" content="Hemca, Strzelewicz, Alexandre, WebApp">
+<meta name="description" content="Think New.">
+<meta name="author" content="Alexandre Strzelewicz">
+<meta name="copyright" content="Strzelewicz Alexandre">
+
+<!-- Mobile Icons -->
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png" type="image/png" />
+
+<!-- Facebook -->
+<meta property="og:title" content="r" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="" />
+<meta property="og:image" content="" />
+<meta property="og:site_name" content="<%= Rails.application.class.name.split('::').first %>" />
+<meta property="fb:app_id" content="xxxxx" />
+
+<!-- G+ -->
+<meta itemprop="name" content="<%= Rails.application.class.name.split('::').first %>" />
+<meta itemprop="description" content="" />
+<meta itemprop="image" content="" />
+
+<!-- Mobile window -->
+<meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1">
+
+<title>
+  <%= Rails.application.class.name.split('::').first %> :: <%= @title_page ? @title_page : controller.action_name.titleize %>
+</title>
+
+<%= stylesheet_link_tag 'application' %>
+<%= yield :stylesheets %>
+<%= csrf_meta_tag %>
+
+
