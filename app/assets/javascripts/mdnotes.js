@@ -12,6 +12,9 @@ MD = function(options) {
     MD.traffic.init();
     MD.liveMarkdown();
     
+    // Create a tutorial note
+    MD.views.tutorialFactory();
+
     // Listen for event click, buttons...
     this.listenUIChanges();
     // Listen for new data coming, remote notes getting..

@@ -8,17 +8,19 @@ MD.views = function() {
 /*
  * Public
  */
-
 MD.views.prototype.createAndAppendNotes = function(data) {
     var self = this;
 
     for (var i = 0; i < data.length; i++) {
 	var note = MD.views.NoteFactory(data[i]);
-	self.noteListingEl.append(note);
-	if (i == 0) {
-	    note.select();
-	}
+	MD.views.appendNote(note);
     }
+};
+
+MD.views.appendNote = function(note) {
+    if (this.listingEl == undefined)
+	this.listingEl = $('#note-listing');
+    this.listingEl.append(note);
 };
 
 MD.views.createNewNote = function() {
@@ -38,6 +40,8 @@ MD.views.deleteNote = function(data) {
     $('#note-listing li').each(function(i, el) {
 	if (parseInt($(el.children[0]).attr('href').split('_')[0].split('#')[1]) == data.id) {
 	    $(el).hide();
+	    var note = MD.views.variables.actualNote.data('data');
+	    note.id = undefined;
 	}
     });
 };
