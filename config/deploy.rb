@@ -2,8 +2,6 @@
 # Deploying system
 # =============================================================================
 
-
-
 require 'bundler/capistrano'
 
 set :application, "MDNotes"
@@ -40,7 +38,7 @@ require "rvm/capistrano"
 set :rvm_ruby_string, '1.9.2-p290'
 
 
-after "deploy:update_code", "deploy:pipeline_precompile"
+after "deploy:update_code", "deploy:migrate", "deploy:pipeline_precompile"
 
 namespace :deploy do
   task :start do ; end
