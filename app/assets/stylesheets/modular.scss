@@ -26,7 +26,11 @@ small {
     animation:my-animation 3s infinite;
     -moz-animation:my-animation 3s infinite; /* Firefox */
     -webkit-animation:my-animation 3s infinite; /* Safari and Chrome */
-
+    
+    a {
+	color : white;
+	text-decoration : none;
+    }
 
     @include rounded(5px);
     @include transition(0.2s);

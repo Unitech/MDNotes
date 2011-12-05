@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <%= render :partial => 'layouts/head' %>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Cabin' rel='stylesheet' type='text/css'>
+  </head>
+  <body id="home-page">    
+    
+    <div id="df-logo">
+      <a href="/">
+	<%= image_tag 'DF-logo.png' %>
+      </a>
+      <div id="df-title">
+	<center>MdNotes<br/>
+	  <small>Take notes, faster.</small>
+	</center>
+      </div>
+    </div>
+    
+
+    <div id="form-devise">
+      <div id="form-devise-internal">
+	<%= yield %>
+      </div>
+    </div>
+
+    <div id="copyright">
+      <a href="http://apps.hemca.com" target="_blank">
+	Assembled by Strzelewicz Alexandre
+      </a>
+    </div>
+    <%= render :partial => 'layouts/javascript' %>
+  </body>
+</html>
