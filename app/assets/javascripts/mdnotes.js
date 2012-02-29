@@ -89,22 +89,28 @@ MD.prototype.listenIOChanges = function() {
 
 MD.prototype.handleShortcuts = function() {
     var self = this;
+
     shortcut.add("Ctrl+S",function() {
 	MD.views.variables.actualNote.save();
     });
 
     shortcut.add("Ctrl+B",function() {
-	self.editArea.insertAtCaret('bold');
+	console.log(self.editArea);
     });
 
-    shortcut.add("Shift+N",function() {
-	MD.views.createNewNote();
-	self.editArea.focus();
+    // shortcut.add("",function() {
+    // 	MD.views.createNewNote();
+    // 	self.editArea.focus();
+    // });
+
+    // shortcut.add("Shift+T", function() {
+    // 	var val = MD.views.variables.actualNote.getTitle();
+    // 	MD.modal.textfield('Change the title', val);	
+    // });
+
+    shortcut.add("Tab",function() {
+	self.editArea.insertAtCaret("    ");
     });
 
-    shortcut.add("Shift+T", function() {
-	var val = MD.views.variables.actualNote.getTitle();
-	MD.modal.textfield('Change the title', val);	
-    });
 };
 
