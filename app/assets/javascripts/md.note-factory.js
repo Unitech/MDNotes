@@ -26,6 +26,10 @@ MD.views.NoteFactory = function(note_data) {
 	$.publish('note.save', data);
     };
 
+    note.getTitle = function() {
+	return MD.views.variables.actualNote.data('data').title;
+    };
+
     // Note is clicked on the left panel
     note.click(function() {
 	note.select();

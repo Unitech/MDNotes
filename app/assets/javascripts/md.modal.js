@@ -14,10 +14,13 @@ MD.modal.desactivate = function() {
 
 MD.modal.textfield = function(text, val) {
     MD.modal.activate();
-    var el = '<br/><br/><p>' + text + '</p><br/><form><input id="newtitle" type="textfield" value="' + val+ '"/>' +
-		 '<br/><input id="send" type="submit" value="Confirm"/></form>';
+    var el = $('<br/><br/><p>' + text + '</p><br/><form><input id="newtitle" type="textfield" value="' + val+ '"/>' +
+	       '<br/><input id="send" type="submit" value="Confirm"/></form>');
 
-    $('#modal-box').html(el).submit(function(e) {
+    $('#modal-box').html(el);
+    $('#newtitle', '#modal-box').focus();
+
+    $('#modal-box').submit(function(e) {
 	e.preventDefault();
 	var new_title = $(this).parent().find('#newtitle').val();
 	MD.views.variables.actualNote.changeTitle(new_title);

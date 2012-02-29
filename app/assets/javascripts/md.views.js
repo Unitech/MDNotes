@@ -73,3 +73,4 @@ MD.views.overrideNoteTitle = function(new_title, note) {
     	}
     });	
 };
+

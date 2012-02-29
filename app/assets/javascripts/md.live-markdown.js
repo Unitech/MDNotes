@@ -10,7 +10,7 @@ MD.liveMarkdown = function() {
     
     var self = this;
     var converter = new Showdown.converter();
-
+    
     this.edit_area.keyup(function(e) {
 	if (!e.ctrlKey) {
 	    MD.traffic.mustSave();

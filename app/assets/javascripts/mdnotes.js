@@ -96,5 +96,15 @@ MD.prototype.handleShortcuts = function() {
     shortcut.add("Ctrl+B",function() {
 	self.editArea.insertAtCaret('bold');
     });
+
+    shortcut.add("Shift+N",function() {
+	MD.views.createNewNote();
+	self.editArea.focus();
+    });
+
+    shortcut.add("Shift+T", function() {
+	var val = MD.views.variables.actualNote.getTitle();
+	MD.modal.textfield('Change the title', val);	
+    });
 };
 
